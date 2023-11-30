@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 
 import { GameMode, MapSize } from '../../App'
-import { Board, Map, SnakeHead, SnakeBody } from './styles'
+import { Board, Map, SnakeHead, SnakeBody, Controls } from './styles'
 import { Modal } from '../Modal/Modal'
 import { Button } from '../Button/Button'
+import { FaArrowUp, FaArrowRight, FaArrowLeft, FaArrowDown } from 'react-icons/fa'
 
 type GameProps = {
     gameMode: GameMode
@@ -703,7 +704,7 @@ export const Game = ({ handleQuit, gameMode, mapSize, onFinish }: GameProps) => 
         if (automaticMove) {
             interval = setInterval(() => {
                 moveHead()
-            }, 1000)
+            }, 500)
         }
 
         return () => {
@@ -758,6 +759,42 @@ export const Game = ({ handleQuit, gameMode, mapSize, onFinish }: GameProps) => 
                     )
                 })}
             </Map>
+            <Controls>
+                <Button 
+                    className={snakeDirection === "up" ? "arrow-btn active" : 'arrow-btn'} 
+                    text={<FaArrowUp />}
+                    handleClick={() => {
+                        setSnakeDirection('up')
+                        moveHead('up')
+                    }} 
+                />
+                <div className="bottom-part">
+                    <Button
+                        className={snakeDirection === "left" ? "arrow-btn active" : 'arrow-btn'} 
+                        text={<FaArrowLeft />} 
+                        handleClick={() => {
+                            setSnakeDirection('left')
+                            moveHead('left')
+                        }} 
+                    />
+                    <Button 
+                        className={snakeDirection === "down" ? "arrow-btn active" : 'arrow-btn'} 
+                        text={<FaArrowDown />} 
+                        handleClick={() => {
+                            setSnakeDirection('down')
+                            moveHead('down')
+                        }} 
+                    />
+                    <Button 
+                        className={snakeDirection === "right" ? "arrow-btn active" : 'arrow-btn'} 
+                        text={<FaArrowRight />} 
+                        handleClick={() => {
+                            setSnakeDirection('right')
+                            moveHead('right')
+                        }} 
+                    />
+                </div>
+            </Controls>
 
             {messageModalInfo.isShown ? (
                 <Modal

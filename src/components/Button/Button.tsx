@@ -1,8 +1,8 @@
-import { ButtonHTMLAttributes } from "react"
+import { ButtonHTMLAttributes, ReactNode } from "react"
 import { Container } from "./styles"
 
 type ButtonProps = {
-    text: string;
+    text: string | ReactNode;
     handleClick: () => void;
 } & ButtonHTMLAttributes<HTMLButtonElement>
 

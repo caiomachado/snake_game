@@ -29,4 +29,14 @@ export const Container = styled.button`
         color: white;
         background: black;
     }
+
+    &.arrow-btn {
+        width: 50px;
+        height: 40px;
+        padding: 0;
+
+        &.active {
+            transform: translateY(2px);
+        }
+    }
 `

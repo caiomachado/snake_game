@@ -5,7 +5,7 @@ export const Board = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 16px;
 
     .header {
         display: flex;
@@ -19,7 +19,6 @@ export const Map = styled.div<{ mapSize: MapSize }>`
     display: flex;
     flex-wrap: wrap; 
     width: ${props => props.mapSize === "large" ? '320px' : props.mapSize === 'medium' ? '240px' : '160px'};
-    height: ${props => props.mapSize === "large" ? '320px' : props.mapSize === 'medium' ? '240px' : '160px'};
 
     .block {
         display: flex;
@@ -154,5 +153,18 @@ export const SnakeBody = styled.div<{ direction: string }>`
         &.bottom-left {
             transform: rotate(270deg);
         }
+    }
+`
+
+export const Controls = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+
+    .bottom-part {
+        display: flex;
+        gap: 8px;
+        align-items: center;
     }
 `
