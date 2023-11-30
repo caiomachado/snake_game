@@ -7,6 +7,6 @@ I have built an easy and a hard mode, you can play either one on each map size (
 
 There isn't much left to say other than...
 
-## [PLAY](https://www.google.com.br)
+## [PLAY](https://snake-game-caiomachado.vercel.app/)
 ## HAVE FUN! 
 ## Disclaimer: TRY NOT TO BREAK YOUR COMPUTER, I do not give money to help you repair it.
