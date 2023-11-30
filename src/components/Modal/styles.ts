@@ -18,6 +18,7 @@ export const Dialog = styled.dialog`
     justify-content: center;
     flex-direction: column;
     gap: 16px;
+    text-align: center;
     font-weight: bold;
     font-size: 28px;
     margin: 0 auto;
@@ -25,7 +26,7 @@ export const Dialog = styled.dialog`
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 25%;
+    width: 50%;
     height: 25%;
 `
 
